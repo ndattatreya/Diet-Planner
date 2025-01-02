@@ -49,7 +49,7 @@ const Header = () => {
             zIndex: 1
           }}
         >
-          <img src="/images/vector.png" alt="vector" />
+          <img src="/images/Vector.png" alt="vector" />
           <Typography 
             variant="body2" 
             component="span" 
