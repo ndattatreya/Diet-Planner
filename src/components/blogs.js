@@ -87,7 +87,7 @@ const BlogCard = ({ image, category, title, description, author, date, readTime 
 const Blogs = () => {
   const blogPosts = [
     {
-      image: './images/emilyPostImg.png',
+      image: './images/EmilyPostImg.png',
       category: 'Weight Loss',
       title: 'The Benefits of Hydration for Weight Loss',
       description: 'Discover how staying hydrated can support your weight loss goals and improve overall health.',
@@ -114,7 +114,7 @@ const Blogs = () => {
       readTime: '5 min read'
     },
     {
-      image: './images/emily2PostImg.png',
+      image: './images/Emily2PostImg.png',
       category: 'Healthy Snacks on the Go',
       title: 'Quick and Nutritious Options',
       description: 'Explore a variety of convenient and healthy snack ideas to keep you fueled throughout the day.',
