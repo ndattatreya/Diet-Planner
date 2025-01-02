@@ -87,7 +87,7 @@ const BlogCard = ({ image, category, title, description, author, date, readTime 
 const Blogs = () => {
   const blogPosts = [
     {
-      image: './images/EmilyPostImg.png',
+      image: './images/emilyPostImg.png',
       category: 'Weight Loss',
       title: 'The Benefits of Hydration for Weight Loss',
       description: 'Discover how staying hydrated can support your weight loss goals and improve overall health.',
