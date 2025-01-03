@@ -22,6 +22,7 @@
   },
   "scripts": {
     "start": "concurrently \"react-scripts start\" \"node server.js\"",
+    "start": "react-scripts start"
     "dev": "nodemon server.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
