@@ -6,7 +6,7 @@
   margin-top: 20px; /* Space above the chat section */
 }
 
-.chat-section h4 {
+.chat-section h4 { 
   margin-bottom: 15px;
   color: #333; /* Darker text for better readability */
 }

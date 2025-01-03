@@ -8,7 +8,7 @@ export const styles = {
     fontWeight: 'bold',
     textAlign: 'center',
     mb: 2
-  },
+  }, 
   subtitle: {
     color: '#555',
     fontSize: { xs: '14px', sm: '16px' },

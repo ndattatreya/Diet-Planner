@@ -9,7 +9,7 @@ export const styles = {
     bgcolor: '#1F432D',
     mx: 'auto',
     my: 1,
-    px: { xs: 2, md: 3 },
+    px: { xs: 2, md: 3 }, 
     maxWidth: 'fit-content',
     borderRadius: 2,
     display: 'flex',

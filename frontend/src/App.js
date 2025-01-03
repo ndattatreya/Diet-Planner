@@ -5,7 +5,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
 import Story from './components/Story';
-import Achievements from './components/Achievements';
+import Achievements from './components/Achievements'; 
 import Team from './components/Team';
 import Process from './components/Process';
 import Contact from './components/Contact';

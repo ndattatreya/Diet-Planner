@@ -5,7 +5,7 @@ import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
 
 const BlogCard = ({ image, category, title, description, author, date, readTime }) => {
   return (
-    <Box sx={{ 
+    <Box sx={{  
       bgcolor: 'white',
       borderRadius: 2,
       overflow: 'hidden',

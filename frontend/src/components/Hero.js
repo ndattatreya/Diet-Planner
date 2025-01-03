@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router-dom';
 import ChatSection from './ChatSection';
 
 const StatCard = ({ icon, number, text }) => (
-  <Card sx={styles.statCard}>
+  <Card sx={styles.statCard}> 
     <CardContent sx={styles.statCardContent}>
       <Box sx={styles.statIconWrapper}>
         {icon}

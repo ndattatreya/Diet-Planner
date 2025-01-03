@@ -7,7 +7,7 @@ import TimelineIcon from '@mui/icons-material/Timeline';
 import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 import SupportAgentIcon from '@mui/icons-material/SupportAgent';
 import TrackChangesIcon from '@mui/icons-material/TrackChanges';
-import LoopIcon from '@mui/icons-material/Loop';
+import LoopIcon from '@mui/icons-material/Loop'; 
 import SchoolIcon from '@mui/icons-material/School';
 import UpdateIcon from '@mui/icons-material/Update';
 import AutoGraphIcon from '@mui/icons-material/AutoGraph';

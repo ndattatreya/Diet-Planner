@@ -8,7 +8,7 @@ export const styles = {
   heroImage: {
     width: '100%',
     height: '100%',
-    objectFit: 'cover',
+    objectFit: 'cover', 
     gap: 10
   },
   

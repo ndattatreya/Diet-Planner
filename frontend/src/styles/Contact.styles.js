@@ -8,7 +8,7 @@ export const styles = {
   logoSection: {
     position: 'absolute',
     top: 40,
-    left: '50%',
+    left: '50%', 
     transform: 'translateX(-50%)',
     display: 'flex',
     justifyContent: 'center',

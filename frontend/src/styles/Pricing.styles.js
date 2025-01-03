@@ -8,7 +8,7 @@ export const styles = {
     mb: 6
   },
 
-  title: {
+  title: { 
     color: '#1B3B27',
     fontSize: { xs: '28px', sm: '32px', md: '36px' },
     fontWeight: 700,

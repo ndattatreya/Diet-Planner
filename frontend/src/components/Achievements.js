@@ -5,7 +5,7 @@ import RestaurantIcon from '@mui/icons-material/Restaurant';
 import SchoolIcon from '@mui/icons-material/School';
 import ThumbUpIcon from '@mui/icons-material/ThumbUp';
 import GroupsIcon from '@mui/icons-material/Groups';
-
+ 
 const AchievementCard = ({ icon, title, description }) => (
   <Box sx={styles.achievementCard}>
     <Box sx={styles.iconWrapper}>

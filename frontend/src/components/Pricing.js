@@ -8,7 +8,7 @@ const PricingCard = ({ title, price, description, features, isPopular, isYearly 
       <Box sx={styles.planType}>
         <Typography 
           sx={{
-            ...styles.planTypeText,
+            ...styles.planTypeText, 
             color: !isYearly ? '#93C926' : 'white'
           }}
         >

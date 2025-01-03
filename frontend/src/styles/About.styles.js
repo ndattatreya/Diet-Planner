@@ -3,7 +3,7 @@ export const styles = {
     bgcolor: '#FAFAFA',
     pt: { xs: 4, md: 6 },
     pb: { xs: 6, md: 8 }
-  },
+  }, 
   logoGrid: {
     mb: { xs: 4, md: 6 }
   },

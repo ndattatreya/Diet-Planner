@@ -4,7 +4,7 @@ export const styles = {
     position: 'relative'
   },
   logoSection: {
-    position: 'absolute',
+    position: 'absolute', 
     top: 40,
     left: '50%',
     transform: 'translateX(-50%)',

@@ -7,7 +7,7 @@ const TeamMember = ({ image, name, position }) => (
     <Box
       component="img"
       src={image}
-      alt={name}
+      alt={name} 
       sx={styles.memberImage}
     />
     <Box sx={styles.memberInfo}>

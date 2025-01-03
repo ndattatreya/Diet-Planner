@@ -7,7 +7,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { styles } from '../styles/Header.styles';
 
 const Header = () => {
-  const location = useLocation();
+  const location = useLocation(); 
   const isMobile = useMediaQuery((theme) => theme.breakpoints.down('sm'));
   const navItems = [
     { label: 'Home', link: '/' },

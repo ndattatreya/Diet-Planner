@@ -8,7 +8,7 @@ import PsychologyIcon from '@mui/icons-material/Psychology';
 import CastForEducationIcon from '@mui/icons-material/CastForEducation';
 import { styles } from '../styles/Features.styles';
 
-const FeatureCard = ({ icon, title, description }) => {
+const FeatureCard = ({ icon, title, description }) => { 
   return (
     <Box sx={{ p: 3, height: '100%' }}>
       <Box

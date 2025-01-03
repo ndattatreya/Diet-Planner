@@ -7,7 +7,7 @@ const StoryCard = ({ image, title, description }) => (
     <Box
       component="img"
       src={image}
-      alt={title}
+      alt={title} 
       sx={styles.storyImage}
     />
     <Box sx={styles.storyContent}>

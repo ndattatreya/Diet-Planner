@@ -6,7 +6,7 @@ import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import { styles } from '../styles/Testimonials.styles';
 
 const TestimonialCard = ({ quote, author, image }) => (
-  <Box sx={styles.testimonialCard}>
+  <Box sx={styles.testimonialCard}> 
     <FormatQuoteIcon sx={styles.quoteIcon} />
     <Typography sx={styles.quote}>{quote}</Typography>
     <Box sx={styles.authorSection}>

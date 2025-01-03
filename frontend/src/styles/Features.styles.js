@@ -7,7 +7,7 @@ export const styles = {
   sectionHeader: {
     textAlign: 'center',
     mb: { xs: 4, md: 6 }
-  },
+  }, 
   title: {
     mb: 2,
     fontWeight: 'bold',

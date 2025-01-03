@@ -6,7 +6,7 @@ export const styles = {
   mainTitle: {
     color: '#1B3B27',
     fontSize: { xs: '28px', sm: '32px', md: '36px' },
-    fontWeight: 'bold',
+    fontWeight: 'bold', 
     textAlign: 'center',
     mb: 2
   },

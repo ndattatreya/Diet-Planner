@@ -5,7 +5,7 @@ export const styles = {
     overflow: 'hidden',
     boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.05)',
     height: '100%'
-  },
+  }, 
   blogImage: {
     width: '100%',
     height: { xs: 200, sm: 240 },

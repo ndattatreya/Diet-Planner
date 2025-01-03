@@ -5,7 +5,7 @@ import { styles } from '../styles/About.styles';
 const About = () => {
   return (
     <Box sx={styles.section}>
-      {/* Logo Grid */}
+      {/* Logo Grid */} 
       <Box sx={styles.logoGrid}>
         <Box sx={styles.logoRow}>
           <Box sx={styles.logoBox} />

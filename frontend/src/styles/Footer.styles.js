@@ -9,7 +9,7 @@ export const styles = {
     justifyContent: 'space-between',
     py: 3,
     px: { xs: 2, sm: 4, md: 6, lg: 8 }
-  },
+  }, 
   logoWrapper: {
     display: 'flex',
     alignItems: 'center',

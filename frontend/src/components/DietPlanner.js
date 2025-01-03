@@ -8,7 +8,7 @@ const DietPlanner = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
-  const handleQuestionChange = (e) => {
+  const handleQuestionChange = (e) => { 
     setQuestion(e.target.value);
   };
 
