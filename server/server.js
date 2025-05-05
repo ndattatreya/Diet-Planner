@@ -7,7 +7,7 @@ const port = 5000;
 app.use(cors()); // Use the cors middleware
 app.use(express.json());
 
-const apiKey = "AIzaSyAvEuSfAA6EwVxKyqVkuO0m8bb4V_8djZw";
+const apiKey = process.env.GEMINI_API_KEY;
 const genAI = new GoogleGenerativeAI(apiKey);
 
 const model = genAI.getGenerativeModel({
