@@ -8,6 +8,8 @@ const DietPlanner = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
+  const BASE_URL = process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000';
+
   const handleQuestionChange = (e) => {
     setQuestion(e.target.value);
   };
@@ -25,7 +27,7 @@ const DietPlanner = () => {
     }
 
     try {
-      const res = await axios.post('http://localhost:5000/api/ask', { question });
+      const res = await axios.post(`${BASE_URL}/api/ask`, { question });
       const formattedResponse = formatResponse(res.data.answer);
       setResponse(formattedResponse || 'No response received.');
     } catch (error) {
@@ -36,32 +38,13 @@ const DietPlanner = () => {
     }
   };
 
-  const BASE_URL = 'https://diet-planner-12.onrender.com';
-
-fetch(`${BASE_URL}/api/ask`, {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json',
-  },
-  body: JSON.stringify({ question: 'What should I eat today?' }),
-})
-  .then(res => res.json())
-  .then(data => {
-    console.log('Gemini Answer:', data.answer);
-    // You can now use `data.answer` in your UI
-  })
-  .catch(error => {
-    console.error('Error:', error);
-  });
-
   const formatResponse = (response) => {
-    // Split the response into paragraphs based on newlines
     const paragraphs = response.split('\n').map((para, index) => (
       <p
         key={index}
         style={{
-          marginBottom: index < response.length - 1 ? '1.5rem' : '0', // Add space only between paragraphs
-          lineHeight: '1.6', // Improve line spacing within each paragraph
+          marginBottom: index < response.length - 1 ? '1.5rem' : '0',
+          lineHeight: '1.6',
         }}
       >
         {para.trim().replace(/[^a-zA-Z0-9 .,!?]/g, '')}
