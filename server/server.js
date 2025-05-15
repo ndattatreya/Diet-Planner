@@ -14,6 +14,10 @@ const model = genAI.getGenerativeModel({
   model: "gemini-2.0-flash-exp",
 });
 
+app.get('/', (req, res) => {
+  res.send('Diet Planner Backend is Live');
+});
+
 const generationConfig = {
   temperature: 1,
   topP: 0.95,
