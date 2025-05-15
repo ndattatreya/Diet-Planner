@@ -36,6 +36,24 @@ const DietPlanner = () => {
     }
   };
 
+  const BASE_URL = 'https://diet-planner-12.onrender.com';
+
+fetch(`${BASE_URL}/api/ask`, {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({ question: 'What should I eat today?' }),
+})
+  .then(res => res.json())
+  .then(data => {
+    console.log('Gemini Answer:', data.answer);
+    // You can now use `data.answer` in your UI
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  });
+
   const formatResponse = (response) => {
     // Split the response into paragraphs based on newlines
     const paragraphs = response.split('\n').map((para, index) => (
