@@ -8,8 +8,6 @@ const DietPlanner = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
-  const BASE_URL = process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000';
-
   const handleQuestionChange = (e) => {
     setQuestion(e.target.value);
   };
@@ -27,7 +25,7 @@ const DietPlanner = () => {
     }
 
     try {
-      const res = await axios.post(`${BASE_URL}/api/ask`, { question });
+      const res = await axios.post('http://localhost:4000/api/ask', { question });
       const formattedResponse = formatResponse(res.data.answer);
       setResponse(formattedResponse || 'No response received.');
     } catch (error) {
@@ -39,12 +37,13 @@ const DietPlanner = () => {
   };
 
   const formatResponse = (response) => {
+    // Split the response into paragraphs based on newlines
     const paragraphs = response.split('\n').map((para, index) => (
       <p
         key={index}
         style={{
-          marginBottom: index < response.length - 1 ? '1.5rem' : '0',
-          lineHeight: '1.6',
+          marginBottom: index < response.length - 1 ? '1.5rem' : '0', // Add space only between paragraphs
+          lineHeight: '1.6', // Improve line spacing within each paragraph
         }}
       >
         {para.trim().replace(/[^a-zA-Z0-9 .,!?]/g, '')}
