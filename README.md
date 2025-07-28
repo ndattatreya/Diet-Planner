@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+# Diet Planner Backend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a Node.js Express backend for a Diet Planner application using Google Generative AI.
 
-## Available Scripts
+## Prerequisites
 
-In the project directory, you can run:
+- Node.js (v18 or above recommended)
+- npm
 
-### `npm start`
+## Setup Instructions
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/ndattatreya/Diet-Planner.git
+   cd Diet-Planner
+   ```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2. **Install dependencies**
+   ```bash
+   cd server
+   npm install
+   ```
 
-### `npm test`
+3. **Create a `.env` file**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+   - In the `server` folder, create a file named `.env`.
+   - Add your Google Generative AI API key:
+     ```
+     GEMINI_API_KEY=your_actual_api_key_here
+     ```
 
-### `npm run build`
+4. **Run the server**
+   ```bash
+   node server.js
+   ```
+   The server will start at [http://localhost:4000](http://localhost:4000).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Notes
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- The `.env` file is ignored by git (see `.gitignore`), so your API key stays private.
+- Make sure your API key is valid and has access to the Gemini model.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## API Endpoints
 
-### `npm run eject`
+- `GET /` — Health check endpoint.
+- `POST /api/ask` — Send a question to the Gemini model.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Troubleshooting
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- If you get an "API key not valid" error, double-check your `.env` file and restart the server.
+- Ensure you are in the `server` folder when running
