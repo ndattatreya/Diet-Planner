@@ -8,6 +8,8 @@ const DietPlanner = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
+  const PORT = process.env.PORT || 4000;
+
   const handleQuestionChange = (e) => {
     setQuestion(e.target.value);
   };
@@ -25,7 +27,7 @@ const DietPlanner = () => {
     }
 
     try {
-      const res = await axios.post('http://localhost:4000/api/ask', { question });
+      const res = await axios.post(`http://localhost:${PORT}/api/ask`, { question });
       const formattedResponse = formatResponse(res.data.answer);
       setResponse(formattedResponse || 'No response received.');
     } catch (error) {
