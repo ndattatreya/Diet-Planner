@@ -49,20 +49,42 @@ const DietPlanner = () => {
   const formatResponse = (text) => {
   if (!text) return null;
 
-  const lines = text.split('\n').filter(Boolean);
+  // 1. Remove markdown stars (**)
+  const cleaned = text.replace(/\*\*/g, '');
+
+  // 2. Split into paragraphs
+  const lines = cleaned.split('\n').filter(line => line.trim() !== '');
 
   return (
     <div style={{ textAlign: 'left' }}>
       {lines.map((line, index) => {
-        if (/procedures|considerations/i.test(line)) {
-          return <h3 key={index}>{line}</h3>;
+        // Headings
+        if (
+          line.toLowerCase().includes('procedures') ||
+          line.toLowerCase().includes('considerations')
+        ) {
+          return (
+            <h3 key={index} style={{ marginTop: '1rem', color: '#2e7d32' }}>
+              {line}
+            </h3>
+          );
         }
 
-        if (line.length < 60 && /^[A-Z]/.test(line)) {
-          return <strong key={index}>{line}</strong>;
+        // Sub-headings
+        if (line.length < 60 && line[0] === line[0].toUpperCase()) {
+          return (
+            <strong key={index} style={{ display: 'block', marginTop: '0.5rem' }}>
+              {line}
+            </strong>
+          );
         }
 
-        return <p key={index}>{line}</p>;
+        // Normal paragraph
+        return (
+          <p key={index} style={{ lineHeight: '1.6', marginBottom: '0.5rem' }}>
+            {line}
+          </p>
+        );
       })}
     </div>
   );
