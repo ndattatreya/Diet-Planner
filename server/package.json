@@ -5,31 +5,31 @@
   "dependencies": {
     "@emotion/react": "11.11.3",
     "@emotion/styled": "11.11.0",
-    "@google/generative-ai": "^0.24.1",
+    "@google/generative-ai": "^0.21.0",
     "@mui/icons-material": "5.15.7",
     "@mui/material": "5.15.7",
     "@mui/system": "5.15.7",
-    "@openrouter/sdk": "^0.3.11",
     "axios": "^1.7.9",
-    "concurrently": "^7.0.0",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
-    "express-rate-limit": "^8.2.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-router-dom": "6.22.0",
-    "react-scripts": "^5.0.1",
-    "web-vitals": "2.1.4"
+    "react-scripts": "5.0.1",
+    "web-vitals": "2.1.4",
+    "concurrently": "^7.0.0"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "server": "node src/server/server.js",
-    "dev": "concurrently \"react-scripts start\" \"npm run server\"",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
+"scripts": {
+  "start": "concurrently \"react-scripts start\" \"node server.js\"",
+  "start": "react-scripts start",
+  "dev": "nodemon src/server/server.js",
+  "client": "react-scripts start",
+  "server": "node src/server/server.js",
+  "build": "react-scripts build",
+  "test": "react-scripts test",
+  "eject": "react-scripts eject"
+},
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -47,8 +47,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
   }
 }
