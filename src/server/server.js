@@ -6,13 +6,23 @@ require('dotenv').config();
 const app = express();
 const PORT = process.env.PORT || 4000;
 
-app.use(cors()); // Use the cors middleware
+app.use(
+  cors({
+    origin: [
+      'http://localhost:3000',
+      'https://ndattatreya-diet-planner.vercel.app'
+    ],
+    methods: ['GET', 'POST', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+  })
+);
+
 app.use(express.json());
 
 // Rate limiting middleware - very conservative for OpenRouter free tier
 const limiter = rateLimit({
   windowMs: 60 * 1000, // 1 minute
-  max: 1, // limit each IP to 1 request per minute (very conservative)
+  max: 5, // limit each IP to 1 request per minute (very conservative)
   message: 'Too many requests. Please wait at least 1 minute between questions.',
   standardHeaders: true,
   legacyHeaders: false,
