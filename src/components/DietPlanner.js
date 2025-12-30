@@ -27,7 +27,7 @@ const DietPlanner = () => {
     }
 
     try {
-      const res = await axios.post(`http://localhost:${PORT}/api/ask`, { question });
+      const res = await axios.post('/api/ask', { question });
       const formattedResponse = formatResponse(res.data.answer);
       setResponse(formattedResponse || 'No response received.');
     } catch (error) {
