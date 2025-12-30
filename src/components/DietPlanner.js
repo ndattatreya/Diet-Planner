@@ -8,7 +8,7 @@ const DietPlanner = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
-  const PORT = process.env.PORT || 4000;
+  const API_BASE_URL = 'https://diet-planner-21py.onrender.com';
 
   const handleQuestionChange = (e) => {
     setQuestion(e.target.value);
@@ -27,7 +27,15 @@ const DietPlanner = () => {
     }
 
     try {
-      const res = await axios.post('/api/ask', { question });
+      const res = await axios.post(
+        `${API_BASE_URL}/api/ask`,
+        { question },
+        {
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        }
+      );
       const formattedResponse = formatResponse(res.data.answer);
       setResponse(formattedResponse || 'No response received.');
     } catch (error) {
