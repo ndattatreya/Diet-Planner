@@ -4,7 +4,7 @@ const rateLimit = require('express-rate-limit');
 require('dotenv').config();
 
 const app = express();
-const port = 4000;
+const PORT = process.env.PORT || 4000;
 
 app.use(cors()); // Use the cors middleware
 app.use(express.json());
@@ -136,6 +136,6 @@ const formatResponse = (response) => {
   return response.replace(/[^a-zA-Z0-9 .,!?]/g, ''); // Remove unwanted symbols
 };
 
-app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}`);
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
