@@ -46,21 +46,27 @@ const DietPlanner = () => {
     }
   };
 
-  const formatResponse = (response) => {
-    // Split the response into paragraphs based on newlines
-    const paragraphs = response.split('\n').map((para, index) => (
-      <p
-        key={index}
-        style={{
-          marginBottom: index < response.length - 1 ? '1.5rem' : '0', // Add space only between paragraphs
-          lineHeight: '1.6', // Improve line spacing within each paragraph
-        }}
-      >
-        {para.trim().replace(/[^a-zA-Z0-9 .,!?]/g, '')}
-      </p>
-    ));
-    return <div>{paragraphs}</div>;
-  };
+  const formatResponse = (text) => {
+  if (!text) return null;
+
+  const lines = text.split('\n').filter(Boolean);
+
+  return (
+    <div style={{ textAlign: 'left' }}>
+      {lines.map((line, index) => {
+        if (/procedures|considerations/i.test(line)) {
+          return <h3 key={index}>{line}</h3>;
+        }
+
+        if (line.length < 60 && /^[A-Z]/.test(line)) {
+          return <strong key={index}>{line}</strong>;
+        }
+
+        return <p key={index}>{line}</p>;
+      })}
+    </div>
+  );
+};
 
   return (
     <div className="diet-planner">
