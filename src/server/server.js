@@ -45,7 +45,45 @@ app.post('/api/ask', async (req, res) => {
 
   try {
     const result = await sendMessageWithRetry(question);
-    const formattedResponse = formatResponse(result);
+    const formatResponse = (text) => {
+  if (!text) return null;
+
+  const lines = text.split('\n').filter(line => line.trim() !== '');
+
+  return (
+    <div style={{ textAlign: 'left' }}>
+      {lines.map((line, index) => {
+        // Headings
+        if (
+          line.toLowerCase().includes('procedures') ||
+          line.toLowerCase().includes('considerations')
+        ) {
+          return (
+            <h3 key={index} style={{ marginTop: '1rem', color: '#2e7d32' }}>
+              {line}
+            </h3>
+          );
+        }
+
+        // Sub-headings (like Gastric Balloon)
+        if (line.length < 60 && line[0] === line[0].toUpperCase()) {
+          return (
+            <strong key={index} style={{ display: 'block', marginTop: '0.5rem' }}>
+              {line}
+            </strong>
+          );
+        }
+
+        // Normal paragraph
+        return (
+          <p key={index} style={{ lineHeight: '1.6', marginBottom: '0.5rem' }}>
+            {line}
+          </p>
+        );
+      })}
+    </div>
+  );
+};
     res.json({ answer: formattedResponse });
   } catch (error) {
     console.error('Error processing request:', error);
