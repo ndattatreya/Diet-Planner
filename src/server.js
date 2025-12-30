@@ -4,7 +4,7 @@ const rateLimit = require('express-rate-limit');
 require('dotenv').config();
 
 const app = express();
-const port = 4000;
+const port = 10000;
 
 app.use(cors()); // Use the cors middleware
 app.use(express.json());
