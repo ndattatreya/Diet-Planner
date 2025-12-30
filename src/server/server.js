@@ -97,8 +97,8 @@ async function sendMessageWithRetry(question, maxRetries = 3) {
           body: JSON.stringify({
             model: 'google/gemini-2.0-flash-exp:free',
             messages: [{ role: 'user', content: question }],
-            temperature: 1,
-            max_tokens: 2048,
+            temperature: 0.5,
+            max_tokens: 512,
           }),
         }
       );
@@ -115,7 +115,7 @@ async function sendMessageWithRetry(question, maxRetries = 3) {
       lastError = error;
 
       if (error.message.includes('429') && attempt < maxRetries) {
-        await sleep(60000);
+        await sleep(5000);
         continue;
       }
 
