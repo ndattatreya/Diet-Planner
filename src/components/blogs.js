@@ -51,7 +51,7 @@ const BlogCard = ({ image, category, title, description, author, date, readTime 
           <Box sx={{ display: 'flex', alignItems: 'center' }}>
             <Box
               component="img"
-              src={`./images/${author.split(' ')[0].toLowerCase()}.png`}
+              src={`/images/${author.split(' ')[0].toLowerCase()}.png`}
               alt={author}
               sx={{
                 width: 32,
@@ -87,7 +87,7 @@ const BlogCard = ({ image, category, title, description, author, date, readTime 
 const Blogs = () => {
   const blogPosts = [
     {
-      image: './images/emilyPostImg.png',
+      image: '/images/emilyPostImg.png',
       category: 'Weight Loss',
       title: 'The Benefits of Hydration for Weight Loss',
       description: 'Discover how staying hydrated can support your weight loss goals and improve overall health.',
@@ -96,7 +96,7 @@ const Blogs = () => {
       readTime: '5 min read'
     },
     {
-      image: './images/saraPostImg.png',
+      image: '/images/saraPostImg.png',
       category: 'Mindful Eating',
       title: 'Cultivating a Healthy Relationship with Food',
       description: 'Learn how practicing mindful eating can help you develop a healthier relationship with food and improve your overall well-being.',
@@ -105,7 +105,7 @@ const Blogs = () => {
       readTime: '5 min read'
     },
     {
-      image: './images/markPostImg.png',
+      image: '/images/markPostImg.png',
       category: 'Understanding Macronutrients',
       title: 'Carbohydrates, Proteins, and Fats',
       description: 'Get a comprehensive understanding of macronutrients and their role in your diet for optimal health and weight management.',
@@ -114,7 +114,7 @@ const Blogs = () => {
       readTime: '5 min read'
     },
     {
-      image: './images/Emily2PostImg.png',
+      image: '/images/Emily2PostImg.png',
       category: 'Healthy Snacks on the Go',
       title: 'Quick and Nutritious Options',
       description: 'Explore a variety of convenient and healthy snack ideas to keep you fueled throughout the day.',

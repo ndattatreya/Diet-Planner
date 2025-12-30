@@ -18,7 +18,7 @@ const Hero = () => {
             <Box sx={styles.imageWrapper}>
               <Box
                 component="img"
-                src="./images/hero-woman.png"
+                src="/images/hero-woman.png"
                 alt="Nutrition Coach"
                 sx={{ ...styles.heroImage, marginTop: -2 }}
               />
@@ -65,7 +65,7 @@ const Hero = () => {
                     <Box
                       key={index}
                       component="img"
-                      src={`./images/${name}`}
+                      src={`/images/${name}`}
                       alt={`${name}'s testimonial`}
                       sx={{
                         ...styles.customerAvatar,
@@ -102,7 +102,7 @@ const Hero = () => {
                 <Box
                   key={index}
                   component="img"
-                  src={`./images/${name}`}
+                  src={`/images/${name}`}
                   alt={`${name}'s testimonial`}
                   sx={{
                     ...styles.customerAvatar,

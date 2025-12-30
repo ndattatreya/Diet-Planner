@@ -12,7 +12,7 @@ const TestimonialCard = ({ quote, author, image }) => (
     <Box sx={styles.authorSection}>
       <Box
         component="img"
-        src={`./images/${author.split(' ')[0].toLowerCase()}.png`}
+        src={`/images/${author.split(' ')[0].toLowerCase()}.png`}
         alt={author}
         sx={styles.authorImage}
       />
