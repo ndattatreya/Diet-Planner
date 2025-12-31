@@ -195,5 +195,5 @@ This is **expected behavior**, not a bug.
 **Dattatreya Nammina**
 Final Year Project | AI + Web
 🔗 [https://github.com/ndattatreya](https://github.com/ndattatreya)
-🔗 [https://www.linkedin.com/in/ndattatreya[(https://www.linkedin.com/in/ndattatreya)
+🔗 [https://www.linkedin.com/in/ndattatreya](https://www.linkedin.com/in/ndattatreya)
 ---
