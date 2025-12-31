@@ -113,12 +113,6 @@ async function sendMessageWithRetry(question, maxRetries = 3) {
 
     } catch (error) {
       lastError = error;
-
-      if (error.message.includes('429') && attempt < maxRetries) {
-        await sleep(10000);
-        continue;
-      }
-
       throw error;
     }
   }
