@@ -1,6 +1,7 @@
 import React from 'react';
 import { ThemeProvider, createTheme } from '@mui/material';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -36,6 +37,7 @@ const theme = createTheme({
 function App() {
   return (
     <Router>
+      <SpeedInsights />
       <ThemeProvider theme={theme}>
         <Header />
         <Routes>
